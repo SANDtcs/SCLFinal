@@ -11,8 +11,9 @@ X_ = 0.2
 X = x0
 Y = y0
 
-while X != X_:
+while X <= X_:
     Y = Y + h * y_diff.subs(x, X).subs(y, Y)
+    print(y_diff.evalf(subs = {x : X, y:Y}))
     X += h
 print(Y)
 
